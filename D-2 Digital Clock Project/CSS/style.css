@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* #importing downloaded fonts */
+@font-face{
+    font-family:double_force_7;
+    src:url('../CSS/double_force_7.ttf')
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(40, 40, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+}
+h2{
+    color: rgba(240, 244, 165, 0.888);
+    font-size: 50px;
+    font-weight: 500;
+}
+.frame{
+    width: 600px;
+    height: 300px;
+    background-color: rgb(19, 19, 20);
+    border: 50px solid rgba(223, 220, 220, 0.724);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 180px;
+}
+.clock{
+    color: white;
+    font-family:double_force_7 ;
+    text-shadow: 0px 0px 10px rgba(222, 135, 42, 0.881);
+    position: relative;
+
+
+}
+/* .clock::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 37px;
+    top: 0;
+    filter: blur(12px);
+
+} */
+.clock::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(175, 248, 6);
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    filter: blur(15px);
+}
