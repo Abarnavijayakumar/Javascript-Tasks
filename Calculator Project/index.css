@@ -1,0 +1,43 @@
+.calculator{
+    width: 30vw;
+    height: 70vh;
+    border: 1px solid grey;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    display: grid; /* this for vertical alignment | <= */
+    gap: 5px;
+    padding: 20px;
+}
+.calculator>.form-group{
+    display: flex; /* this for horizontal alignment -- <= */
+    justify-content: space-between;
+    gap: 5px;
+}
+.calculator>.form-group>button{
+    width: 25%; /*why 25% the container is 100% every btn has 25% now its even to 100*/
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.calculator>.form-group>button:hover{
+    background-color: grey;
+}
+.calculator>.form-group>input{
+    width: 100%;
+    font-size: 40px;
+    border: 1px solid rgb(198, 196, 196);
+    text-align: end;
+    outline: none;
+    border-radius: 5px;
+    padding-right: 10px;
+
+}
+.calculator>.form-group>.equal-btn{
+    color: aliceblue;
+    background-color: rgb(4, 48, 159);
+    font-size: 30px;
+}
+.calculator>.form-group>.equal-btn:hover{
+    background-color: rgb(42, 97, 236);
+}
