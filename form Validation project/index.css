@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 100px;
+}
+h1{
+    text-align: center;
+    color:  rgb(29, 29, 122);
+    margin-bottom: 10px;
+}
+
+#form-validate{
+    
+    border: 1px solid rgb(23, 38, 88);
+    width: 30vw;
+    min-width: 300px; /* why min width bcz when you shorter scrn size then it will appear for properly incase without this it will show unallignly  */
+    height: 60vh;
+    box-shadow: 0px 0px 8px 5px rgba(45, 132, 238, 0.452);
+    margin: auto;
+    display: grid;
+    padding: 20px;
+    border-radius: 5px;
+}
+#form-validate .form-group{
+    display: flex;
+    flex-direction: column;
+}
+#form-validate .form-group label{
+    font-size: 17px ;
+    color:  rgb(29, 29, 122);
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom:5px;
+    
+}
+#form-validate .form-group input{
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    font-size: 15px;
+    padding: 5px;
+
+}
+#form-validate button{
+    height: 35px;
+    background-color: rgb(29, 29, 122);
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+}
+#form-validate .form-group span{
+    color: red;
+    margin-top: 5px;
+    font-size: 13px;
+}
