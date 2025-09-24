@@ -13,6 +13,9 @@ document.getElementById('form-validate').addEventListener('submit', function(eve
     let passdError = document.getElementById('pswd-error')
     let cpassdError = document.getElementById('Cpswd-error')
 
+    let isValid = true; // this is for all values true iruntha matum dha alert message varanum illana varakoodathu so adhuku tha idha isVAlid vechu lgic create panro
+    // initial ah true nu vekro epo andha value error iruku apo false ah maridanu inga 
+
     // Abarna Vijaykumar
     let uNamePatten = /^[A-Za-z]+ [A-Za-z]+$/ 
     let emailPAtten = /^[a-z0-9]+@[a-z]{4,}\.[a-z]{2,}$/
@@ -22,42 +25,59 @@ document.getElementById('form-validate').addEventListener('submit', function(eve
     // incase username la no venum na arryltrel kula add panikala enala venum oh [A-za-z0-9] like ths / 
     if (userName === "") {
         unameError.innerText = "Name is Required"
+        isValid = false;
     }
     else if (!uNamePatten.test(userName)){ // why test mela namba regular expression dhana use panni irukom so adhula oru method dha test norml yethacho string input vechu iruntha dha ithula potu test panuvom
-unameError.innerText = "* Enter Your Full Name"
+    unameError.innerText = "* Enter Your Full Name"
+    isValid = false;
     }
     else if (uNamePatten.test(userName)) {
         unameError.innerText =""
+        isValid = true;
     }  // this for crt ah enter panathuku aprm uh error  katama iruka indha else if block
+
 
      if ( email === "") {
         emailError.innerText = "Email is Required"
+        isValid = false;
     }
     else if (!emailPAtten.test(email)) {
         emailError.innerText = "* Enter Your Valid Email id"
+        isValid = false;
     }
-     else if (emailPAtten.test(userName)) {
+     else if (emailPAtten.test(email)) {
         emailError.innerText =""
+        isValid = true;
     } 
 
     if (Password === "") {
         passdError.innerText = "Password is Required"
+        isValid = false;
     }
     else if (Password.length <=3 || Password.length >10 ) {
         passdError.innerText = "Enter a password between 3 to 10 "
+        isValid = false;
     }
      else if (Password.length >3 || Password.length <10) {
-        passdError.innerText = ""
+        passdError.innerText =""
+        isValid = true;
      }
     if (ConfirmPassword === "") {
         cpassdError.innerText = "Confirm Password is Required"
+        isValid = false;
     }
     else if (ConfirmPassword !== Password) {
         cpassdError.innerHTML ="Password Not Match"
+        isValid = false;
     }
      else if (ConfirmPassword !== Password) {
         cpassdError.innerHTML =""
+        isValid = true;
     }
 
+    if (isValid){
+        alert (`Hi ${userName}, Welcome To Our Website`)
+    }
+   
     
 }) 
